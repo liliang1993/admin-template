@@ -23,7 +23,7 @@
             style="width: 100%"
             placeholder="请选择日期" />
         </a-form-item>
-         <a-form-item
+        <a-form-item
           label="发布状态"
           :labelCol="{lg: {span: 7}, sm: {span: 7}}"
           :wrapperCol="{lg: {span: 10}, sm: {span: 17} }"
@@ -49,13 +49,7 @@
           label="文章内容"
           :labelCol="{lg: {span: 7}, sm: {span: 7}}"
           :wrapperCol="{lg: {span: 10}, sm: {span: 17} }">
-          <a-textarea
-            rows="4"
-            placeholder="请输入衡量标准"
-            v-decorator="[
-              'type',
-              {rules: [{ required: true, message: '请输入衡量标准' }]}
-            ]" />
+          <TinyMceEditor v-model="content"></TinyMceEditor>
         </a-form-item>
         <a-form-item
           :wrapperCol="{ span: 24 }"
@@ -70,11 +64,15 @@
 </template>
 
 <script>
+import { TinyMceEditor } from '@/components'
+
 export default {
-  name: 'BaseForm',
+  name: 'DynamicDetail',
+  components: { TinyMceEditor },
   data () {
     return {
-      form: this.$form.createForm(this)
+      form: this.$form.createForm(this),
+      content: ''
     }
   },
   methods: {

@@ -13,8 +13,8 @@ export const asyncRouterMap = [
     path: '/',
     name: 'index',
     component: BasicLayout,
-    meta: { title: 'menu.home' },
-    redirect: '/dynamic/list',
+    meta: { title: '高盈动态' },
+    redirect: '/dynamic',
     children: [
       // dynamic
       {

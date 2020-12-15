@@ -27,6 +27,9 @@ import ArticleListContent from '@/components/ArticleListContent'
 
 import Dialog from '@/components/Dialog'
 
+// TinyMce Editor
+import TinyMceEditor from '@/components/TinyMceEditor'
+
 export {
   AvatarList,
   Bar,
@@ -52,5 +55,6 @@ export {
   StandardFormRow,
   ArticleListContent,
 
-  Dialog
+  Dialog,
+  TinyMceEditor
 }
