@@ -2,12 +2,12 @@
  * @Description: 高盈动态详情页
  * @Author: Harry
  * @Date: 2020-12-15 15:52:53
- * @LastEditTime: 2020-12-15 17:46:41
+ * @LastEditTime: 2020-12-16 18:39:41
  * @LastEditors: Harry
 -->
 <template>
   <!-- hidden PageHeaderWrapper title demo -->
-  <page-header-wrapper :title="false" >
+  <page-header-wrapper :title="false">
     <a-card :body-style="{padding: '24px 32px'}" :bordered="false">
       <a-form @submit="handleSubmit" :form="form">
         <a-form-item
@@ -15,10 +15,7 @@
           :labelCol="{lg: {span: 7}, sm: {span: 7}}"
           :wrapperCol="{lg: {span: 10}, sm: {span: 17} }">
           <a-date-picker
-            v-decorator="[
-              'date',
-              {rules: [{ required: true, message: '请选择' }]}
-            ]"
+            v-decorator="['date']"
             name="name"
             style="width: 100%"
             placeholder="请选择日期" />
