@@ -45,6 +45,35 @@ export const asyncRouterMap = [
           }
         ]
       },
+      // banner
+      {
+        path: '/banner',
+        name: 'banner',
+        redirect: '/banner/list',
+        component: RouteView,
+        hideChildrenInMenu: true,
+        meta: { title: 'banner管理', keepAlive: true, icon: bxAnaalyse, permission: [ 'dashboard' ] },
+        children: [
+          {
+            path: '/banner/list',
+            name: 'bannerList',
+            component: () => import('@/views/banner/List'),
+            meta: { title: 'banner管理', keepAlive: false, permission: [ 'dashboard' ] }
+          },
+          {
+            path: '/banner/add',
+            name: 'bannerAdd',
+            component: () => import('@/views/banner/Detail'),
+            meta: { title: '新增banner', keepAlive: true, permission: [ 'dashboard' ] }
+          },
+          {
+            path: '/banner/edit',
+            name: 'bannerEdit',
+            component: () => import('@/views/banner/Detail'),
+            meta: { title: '编辑动态', keepAlive: true, permission: [ 'dashboard' ] }
+          }
+        ]
+      },
       // dashboard
       {
         path: '/dashboard',
