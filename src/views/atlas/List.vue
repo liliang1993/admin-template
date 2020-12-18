@@ -2,7 +2,7 @@
  * @Description: developmentMemorabilia
  * @Author: Harry
  * @Date: 2020-12-15 13:59:17
- * @LastEditTime: 2020-12-18 20:05:56
+ * @LastEditTime: 2020-12-18 20:05:31
  * @LastEditors: Harry
 -->
 <template>
@@ -68,10 +68,39 @@ const columns = [
     title: '序号',
     scopedSlots: { customRender: 'serial' }
   },
-
+  // {
+  //   title: '年度',
+  //   dataIndex: 'description',
+  //   scopedSlots: { customRender: 'description' }
+  // },
+  // {
+  //   title: '中文简体',
+  //   dataIndex: 'status',
+  //   scopedSlots: { customRender: 'status' }
+  // },
+  // {
+  //   title: '中文繁体',
+  //   dataIndex: 'status',
+  //   scopedSlots: { customRender: 'status' }
+  // },
+  // {
+  //   title: '英文',
+  //   dataIndex: 'status',
+  //   scopedSlots: { customRender: 'status' }
+  // },
+  // {
+  //   title: '日期',
+  //   dataIndex: 'status',
+  //   scopedSlots: { customRender: 'status' }
+  // },
   {
     title: '标题',
     dataIndex: 'description',
+    sorter: true
+  },
+   {
+    title: '更新日期',
+    dataIndex: 'updatedAt',
     sorter: true
   },
   {

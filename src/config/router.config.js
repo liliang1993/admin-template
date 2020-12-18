@@ -90,14 +90,14 @@ export const asyncRouterMap = [
             meta: { title: '发展大事记', keepAlive: false, permission: [ 'dashboard' ] }
           },
           {
-            path: '/banner/add',
-            name: 'bannerAdd',
+            path: '/development-history/add',
+            name: 'developmentHistoryAdd',
             component: () => import('@/views/developmentHistory/Detail'),
             meta: { title: '新增大事记', keepAlive: true, permission: [ 'dashboard' ] }
           },
           {
-            path: '/banner/edit',
-            name: 'bannerEdit',
+            path: '/development-history/edit',
+            name: 'developmentHistoryEdit',
             component: () => import('@/views/developmentHistory/Detail'),
             meta: { title: '编辑大事记', keepAlive: true, permission: [ 'dashboard' ] }
           }

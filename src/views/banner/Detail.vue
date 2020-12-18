@@ -88,7 +88,7 @@
         </div>
       </div>
 
-       <div class="uploader-box">
+      <div class="uploader-box">
         <div class="uploader-box__hd">
           中文繁体
         </div>
