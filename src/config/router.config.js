@@ -19,7 +19,7 @@ export const asyncRouterMap = [
       // dynamic
       {
         path: '/dynamic',
-        name: 'dynamic',
+        name: 'Dynamic',
         redirect: '/dynamic/list',
         component: RouteView,
         hideChildrenInMenu: true,
@@ -27,19 +27,19 @@ export const asyncRouterMap = [
         children: [
           {
             path: '/dynamic/list',
-            name: 'dynamicList',
+            name: 'DynamicList',
             component: () => import('@/views/dynamic/List'),
             meta: { title: '高盈动态', keepAlive: false, permission: [ 'dashboard' ] }
           },
           {
             path: '/dynamic/add',
-            name: 'dynamicAdd',
+            name: 'DynamicAdd',
             component: () => import('@/views/dynamic/Detail'),
             meta: { title: '新增文章', keepAlive: true, permission: [ 'dashboard' ] }
           },
           {
             path: '/dynamic/edit',
-            name: 'dynamicEdit',
+            name: 'DynamicEdit',
             component: () => import('@/views/dynamic/Detail'),
             meta: { title: '编辑动态', keepAlive: true, permission: [ 'dashboard' ] }
           }
@@ -71,6 +71,35 @@ export const asyncRouterMap = [
             name: 'bannerEdit',
             component: () => import('@/views/banner/Detail'),
             meta: { title: '编辑动态', keepAlive: true, permission: [ 'dashboard' ] }
+          }
+        ]
+      },
+      // developmentHistory 发展大事记
+      {
+        path: '/development-history',
+        name: 'DevelopmentHistory',
+        redirect: '/development-history/list',
+        component: RouteView,
+        hideChildrenInMenu: true,
+        meta: { title: '发展大事记', keepAlive: true, icon: bxAnaalyse, permission: [ 'dashboard' ] },
+        children: [
+          {
+            path: '/development-history/list',
+            name: 'DevelopmentHistoryList',
+            component: () => import('@/views/developmentHistory/List'),
+            meta: { title: '发展大事记', keepAlive: false, permission: [ 'dashboard' ] }
+          },
+          {
+            path: '/banner/add',
+            name: 'bannerAdd',
+            component: () => import('@/views/developmentHistory/Detail'),
+            meta: { title: '新增大事记', keepAlive: true, permission: [ 'dashboard' ] }
+          },
+          {
+            path: '/banner/edit',
+            name: 'bannerEdit',
+            component: () => import('@/views/developmentHistory/Detail'),
+            meta: { title: '编辑大事记', keepAlive: true, permission: [ 'dashboard' ] }
           }
         ]
       },
