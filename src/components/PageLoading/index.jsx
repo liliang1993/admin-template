@@ -60,7 +60,7 @@ loading.newInstance = (Vue, options) => {
       const props = {}
       this.tip && (props.tip = tip)
       if (this.visible) {
-        return <PageLoading { ...{ props } } />
+        return <PageLoading {...{ props }} />
       }
       return null
     }
@@ -98,6 +98,7 @@ const install = function (Vue, options) {
   }
   api.instance = loading.newInstance(Vue, options)
   Vue.prototype.$loading = api
+  window.loading = api
 }
 
 export default {
